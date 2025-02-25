@@ -1,7 +1,7 @@
-export default function Component() {
+export default function Calculator() {
     return (
         <>
-        <h1>Baaaaaay</h1>
+            <h1>Baaaaaay</h1>
         </>
     );
 }
