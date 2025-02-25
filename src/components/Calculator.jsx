@@ -1,7 +1,9 @@
+import ButtonsComponent from "./ButtonsComponent";
+
 export default function Calculator() {
     return (
         <>
-            <h1>Baaaaaay</h1>
+            <ButtonsComponent />
         </>
     );
 }
