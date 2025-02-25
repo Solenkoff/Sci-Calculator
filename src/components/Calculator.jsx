@@ -1,9 +1,11 @@
-import ButtonsComponent from "./ButtonsComponent";
+import Buttons from "./Buttons";
+import Display from "./Display";
 
 export default function Calculator() {
     return (
         <>
-            <ButtonsComponent />
+            <Display />
+            <Buttons />
         </>
     );
 }

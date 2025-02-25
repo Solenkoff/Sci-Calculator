@@ -4,3 +4,10 @@
     bottom: 5px; 
     font-size: 70%;
   }
+
+  .display {
+    width: 420px;
+    height: 42px;
+    background-color: blueviolet;
+    color: white;
+  }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ButtonsComponent({ btnHandler }) {
+export default function Buttons({ btnHandler }) {
 
     return (
         <div className="buttons_section">
