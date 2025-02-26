@@ -36,6 +36,10 @@ export default function Calculator() {
         } else if (actionSymbol === 'BACK') {
             setShowExpression(showExpression.slice(0, -1));
             setExpression(expression.slice(0, -1));
+        } else if (actionSymbol === 'AC') {
+            setExpression('');
+            setShowExpression('');
+            setResult('0');
         } else {
             setExpression(expression + actionSymbol);
             setShowExpression(showExpression + actionSymbol);
