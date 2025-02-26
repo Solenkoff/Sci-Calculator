@@ -24,10 +24,13 @@ export default function Calculator() {
         if (calcOptions.hasOwnProperty(actionSymbol)) {
             setShowExpression(showExpression + actionSymbol);
             setExpression(expression + calcOptions[actionSymbol]);
-        } 
+        } else {
+            setExpression(expression + actionSymbol);
+            setShowExpression(showExpression + actionSymbol);
+        }
     }
 
-
+   
     return (
         <>
             <Display expression={showExpression} result={result} />
