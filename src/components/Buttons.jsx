@@ -5,7 +5,7 @@ export default function Buttons({ btnHandler }) {
     return (
         <div className="buttons_section">
             <div className="sci_section">
-                <button className="btn sci" onClick={() => btnHandler('x!')} >x!</button>
+                <button className="btn sci" onClick={() => btnHandler('!')} >x!</button>
                 <button className="btn sci" onClick={() => btnHandler('(')} >(</button>
                 <button className="btn sci" onClick={() => btnHandler(')')} >)</button>
                 <button className="btn sci" onClick={() => btnHandler('sin')} >sin</button>
@@ -16,13 +16,13 @@ export default function Buttons({ btnHandler }) {
                 <button className="btn sci" onClick={() => btnHandler('√')} >√</button>
                 <button className="btn sci" onClick={() => btnHandler('e')} >e</button>
                 <button className="btn sci" onClick={() => btnHandler('log')} >log</button>
-                <button className="btn sci" onClick={() => btnHandler('x')} >x
+                <button className="btn sci" onClick={() => btnHandler('^')} >x
                     <span className="sup">y</span>
                 </button>
             </div>
             <div className="main_section">
                 <button className="btn clear" onClick={() => btnHandler('AC')} >AC</button>
-                <button className="btn other" onClick={() => btnHandler('DEL')} >DEL</button>
+                <button className="btn other" onClick={() => btnHandler('BACK')} >⇐</button>
                 <button className="btn operator" onClick={() => btnHandler('/')} >/</button>
                 <button className="btn num" onClick={() => btnHandler('7')} >7</button>
                 <button className="btn num" onClick={() => btnHandler('8')} >8</button>
