@@ -31,12 +31,28 @@ export default function Calculator() {
                 setShowExpression(showExpression + actionSymbol);
                 setExpression(expression.replace(numToFactorial, getFactorial(num)));
             }
+        } else if (actionSymbol === "=") {
+            evalAndSetExpression();
         } else {
             setExpression(expression + actionSymbol);
             setShowExpression(showExpression + actionSymbol);
         }
     }
 
+
+    function evalAndSetExpression() {
+        if (expression.length === 0) {
+            setResult('Error!');
+        } else {
+            try {
+                let calculation = eval(expression);
+                calculation = parseFloat(calculation.toFixed(7));
+                setResult(calculation);
+            } catch (error) {
+                setResult('Error!');
+            }
+        }
+    }
 
     function getNumToFactorial(exp) {
         const allNumsInExpression = exp.match(/\d+/g);
