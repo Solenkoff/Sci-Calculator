@@ -3,7 +3,7 @@ import React from "react";
 export default function Buttons({ btnHandler }) {
 
     return (
-        <div className="buttons_section">
+        <div className="buttons-wrapper">
             <div className="sci_section">
                 <button className="btn sci" onClick={() => btnHandler('!')} >x!</button>
                 <button className="btn sci" onClick={() => btnHandler('(')} >(</button>
@@ -20,7 +20,7 @@ export default function Buttons({ btnHandler }) {
                     <span className="sup">y</span>
                 </button>
             </div>
-            <div className="main_section">
+            <div className="main-section">
                 <button className="btn clear" onClick={() => btnHandler('AC')} >AC</button>
                 <button className="btn other" onClick={() => btnHandler('BACK')} >⇐</button>
                 <button className="btn operator" onClick={() => btnHandler('/')} >/</button>

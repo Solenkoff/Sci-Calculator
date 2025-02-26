@@ -64,25 +64,28 @@ export default function Calculator() {
     function getNumToFactorial(exp) {
         const allNumsInExpression = exp.match(/\d+/g);
         const numToFactorial = allNumsInExpression ? allNumsInExpression[allNumsInExpression.length - 1] : null;
-    
+
         return numToFactorial;
     }
-    
+
     function getFactorial(num) {
         let result = 1;
         for (let i = 1; i <= num; i++) {
             result *= i;
         }
-    
+
         return result;
     }
 
-   
+
     return (
-        <>
-            <Display expression={showExpression} result={result} />
-            <Buttons btnHandler={btnHandler} />
-        </>
+        <div className="calc-background">
+            <div className="calc-wrapper">
+                <Display expression={showExpression} result={result} />
+                <Buttons btnHandler={btnHandler} />
+            </div>
+        </div>
+
     );
 };
 
