@@ -24,10 +24,34 @@ export default function Calculator() {
         if (calcOptions.hasOwnProperty(actionSymbol)) {
             setShowExpression(showExpression + actionSymbol);
             setExpression(expression + calcOptions[actionSymbol]);
+        } else if (actionSymbol === "!") {
+            const numToFactorial = getNumToFactorial(expression);
+            if (numToFactorial != null) {
+                const num = parseFloat(numToFactorial);
+                setShowExpression(showExpression + actionSymbol);
+                setExpression(expression.replace(numToFactorial, getFactorial(num)));
+            }
         } else {
             setExpression(expression + actionSymbol);
             setShowExpression(showExpression + actionSymbol);
         }
+    }
+
+
+    function getNumToFactorial(exp) {
+        const allNumsInExpression = exp.match(/\d+/g);
+        const numToFactorial = allNumsInExpression ? allNumsInExpression[allNumsInExpression.length - 1] : null;
+    
+        return numToFactorial;
+    }
+    
+    function getFactorial(num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+            result *= i;
+        }
+    
+        return result;
     }
 
    
