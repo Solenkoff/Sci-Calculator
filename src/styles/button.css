@@ -1,6 +1,6 @@
 
 button {
-    width: 68px;
+    min-width: 68px;
     height: 32px;
     color: white;
     border: none;
