@@ -71,3 +71,14 @@ html {
     gap: 16px;
 }
 
+.buttons-wrapper {
+    width: 490px;
+    display: flex;
+    justify-content: space-between;
+
+.btn {
+    width: 68px;
+    height: 32px;
+    background-color: pink;
+    color: white;
+}
