@@ -1,10 +1,14 @@
 import React from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRegistered } from '@fortawesome/fontawesome-free-regular'
+
 export default function Buttons({ btnHandler }) {
 
     return (
         <div className="buttons-wrapper">
             <div className="sci_section">
+                <p className="sol">Solenkoff<FontAwesomeIcon icon={faRegistered} /></p>
                 <button className="btn sci" onClick={() => btnHandler('!')} ><span class="text">x!</span></button>
                 <button className="btn sci" onClick={() => btnHandler('(')} ><span class="text">(</span></button>
                 <button className="btn sci" onClick={() => btnHandler(')')} ><span class="text">)</span></button>
